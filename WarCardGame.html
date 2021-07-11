@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>War Card Game</h1>
+    <script src="classeswargames.js"></script>
+    <script src="WarGameCard.js"></script>
+    <script>
+        let newGame = new Deck;
+        let theTwoSets = newGame.dealCards();
+        let player1 = new Player('Charlene Taylor',theTwoSets[0]);
+        let player2 = new Player('Laura Webber',theTwoSets[1]);
+        playWar(player1,player2);
+    </script>
+</body>
+</html>
