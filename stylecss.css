@@ -1,0 +1,35 @@
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 5px;
+    background-color: #e4bca1;
+    border: 2px solid #aa4f05;
+    text-align: center;
+  }
+
+body {
+  background-color: beige;
+  font-style: normal;
+}
+
+#thankyou {
+  background-color: rgb(231, 190, 157);
+}
+
+ul :hover{
+  background-color: #aa4f05
+};
+
+table {
+  border-collapse: collapse;
+  border: 1px solid black;
+} 
+
+th,td {
+  border: 1px solid black;
+}
+
+* {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
