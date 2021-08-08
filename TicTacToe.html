@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FE Tech: Week 5 - TicTacToe</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="./TicTacToe.css" type="text/css">
+    <script type="text/javascript" src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    
+</head>
+
+<body>
+    <main class="container">
+        <div class="card mb-5" id="intro">
+            <div class="card-body" id="cardIntro">
+                <h1>The game: Tic Tac Toe</h1>
+                <p>The rules
+                <ol>
+                    <li>The game is played on a grid that's 3 squares by 3 squares.</li>
+                    <li>You are X, your friend (or the computer in this case) is O. Players take turns putting their marks in empty squares.</li>
+                    <li>The first player to get 3 of her marks in a row (up, down, across, or diagonally) is the winner.</li>
+                    <li>When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a tie.</li>
+                </ol>
+                </p>
+            </div>
+        </div>
+
+        <div class="card" id="cardGame">
+            <div class="card-body">
+
+                <table class="table ttt">
+                    <tr>
+                        <th>🙈</th>
+                        <th>🙉</th>
+                        <th>🙊</th>
+                    </tr>
+                    <tr>
+                        <td data-row="0" data-col="0">&nbsp;</td>
+                        <td data-row="0" data-col="1">&nbsp;</td>
+                        <td data-row="0" data-col="2">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td data-row="1" data-col="0">&nbsp;</td>
+                        <td data-row="1" data-col="1">&nbsp;</td>
+                        <td data-row="1" data-col="2">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td data-row="2" data-col="0">&nbsp;</td>
+                        <td data-row="2" data-col="1">&nbsp;</td>
+                        <td data-row="2" data-col="2">&nbsp;</td>
+                    </tr>
+                </table>
+            <h2 id="playerMsg" class="center">Let's start with player 1.</h2>
+            </div>
+            </div>
+        </div>
+
+    </main>
+    <script type="text/javascript" src="./node_modules/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="./tic-tac-toe.js"></script>
+    <script>
+    
+    let Game = new TicTacToe( {msgElem:"#playerMsg"});
+    Game.setMsgElem("#playerMsg");
+    Game.setTableElem("table.table.ttt");
+
+    let cellElems = document.querySelectorAll('table.table.ttt td'); 
+    for (let i=0; i<cellElems.length; i++) {
+        cellElems[i].addEventListener('click', () => {Game.doClick( cellElems[i],"X" )} );
+    }
+
+    </script>
+
+</body>
+
+</html>
